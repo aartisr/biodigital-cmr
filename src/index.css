@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+html,
+body,
+#root {
+  min-height: 100%;
+  width: 100%;
+}
+
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+:where(button, a, input, select, textarea, [role="tab"]):focus-visible {
+  outline: 3px solid rgb(45 212 191);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .modal-scroll-safe {
+    max-height: calc(100dvh - 1rem);
+    overflow-y: auto;
+  }
+}

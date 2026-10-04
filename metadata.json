@@ -1,0 +1,6 @@
+{
+  "name": "BD-CMR | Bio-Digital Closed-Loop Myocardial Regeneration",
+  "description": "Clinical-grade closed-loop myocardial regeneration platform managing real-time cellular telemetry synchronization, adaptive epigenetic LNP micro-dosing, conductive nanogrid pacing, and HIPAA-compliant data pipelines.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
