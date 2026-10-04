@@ -1,0 +1,7 @@
+import { EvidenceRecord } from '../../types/assessment/evidence';
+import { EvidenceStateBadge } from './EvidenceStateBadge';
+
+export const EvidenceMatrix = <TDomain extends string>({ evidence, domainLabels }: { evidence: readonly EvidenceRecord<TDomain>[]; domainLabels: Record<TDomain, string> }) => <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-4 sm:p-5">
+  <div><h2 className="text-base font-bold text-white">Evidence matrix</h2><p className="mt-1 text-xs text-slate-400">Each signal is intentionally represented as present, absent, indeterminate, or not observed.</p></div>
+  <div className="mt-4 space-y-2">{evidence.map((item) => <article key={item.id} className="flex flex-col gap-2 rounded-xl border border-slate-800/90 bg-slate-950/45 p-3 sm:flex-row sm:items-start sm:justify-between"><div className="min-w-0"><div className="flex flex-wrap items-center gap-2"><span className="text-xs font-bold uppercase tracking-wide text-teal-300">{domainLabels[item.domain]}</span><span className="text-xs text-slate-500">{new Date(item.observedAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span></div><p className="mt-1 text-sm text-slate-200">{item.summary}</p>{item.limitations.length > 0 && <p className="mt-1 text-xs text-amber-200/80">Limitation: {item.limitations.join(' ')}</p>}</div><EvidenceStateBadge state={item.state} /></article>)}</div>
+</section>;

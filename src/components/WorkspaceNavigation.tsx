@@ -1,10 +1,11 @@
 import React, { KeyboardEvent } from 'react';
-import { Activity, FileCheck2, HeartPulse, Layers3, SlidersHorizontal } from 'lucide-react';
+import { Activity, FileCheck2, HeartPulse, Layers3, SlidersHorizontal, Stethoscope } from 'lucide-react';
 import { WorkspaceId, workspaceIds, workspaceMetadata } from '../types/workspace';
 
 const icons: Record<WorkspaceId, React.ComponentType<{ className?: string }>> = {
   OVERVIEW: HeartPulse,
   MONITORING: Activity,
+  MI_SPECTRUM: Stethoscope,
   IMAGING: Layers3,
   THERAPY: SlidersHorizontal,
   REVIEW: FileCheck2,
@@ -30,7 +31,7 @@ export const WorkspaceNavigation: React.FC<{ activeWorkspace: WorkspaceId; onCha
 
   return (
     <nav aria-label="Clinical workspace" className="border-b border-slate-800 bg-slate-950/95 px-2 sm:px-6">
-      <div className={`mx-auto grid max-w-[1600px] gap-1 py-2 sm:flex ${workspaces.length === 1 ? 'grid-cols-1' : workspaces.length === 2 ? 'grid-cols-2' : workspaces.length === 3 ? 'grid-cols-3' : workspaces.length === 4 ? 'grid-cols-4' : 'grid-cols-5'}`} role="tablist" aria-orientation="horizontal">
+      <div className={`mx-auto grid max-w-[1600px] gap-1 py-2 sm:flex ${workspaces.length === 1 ? 'grid-cols-1' : workspaces.length === 2 ? 'grid-cols-2' : workspaces.length === 3 ? 'grid-cols-3' : workspaces.length === 4 ? 'grid-cols-4' : workspaces.length === 5 ? 'grid-cols-5' : 'grid-cols-3'}`} role="tablist" aria-orientation="horizontal">
         {workspaces.map((workspace) => {
           const Icon = icons[workspace];
           const active = workspace === activeWorkspace;

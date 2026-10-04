@@ -6,7 +6,7 @@ export const personaCapabilities = [
   'VIEW_LIVE_TELEMETRY', 'REVIEW_ALERTS', 'VIEW_IMAGING', 'VIEW_THERAPY_CONTEXT',
   'PROPOSE_PACING_CHANGE', 'REVIEW_AUDIT', 'EXPORT_RESEARCH_ARTIFACT',
   'VIEW_INTEGRATION_HEALTH', 'RUN_SANDBOX_SIMULATION', 'VIEW_SESSION_ARTIFACTS',
-  'VIEW_RESEARCH_ANALYSIS',
+  'VIEW_RESEARCH_ANALYSIS', 'VIEW_MI_SIMULATION',
 ] as const;
 export type PersonaCapability = typeof personaCapabilities[number];
 export type PersonaSessionState = 'LOADING' | 'ACTIVE' | 'DENIED' | 'UNAVAILABLE';
