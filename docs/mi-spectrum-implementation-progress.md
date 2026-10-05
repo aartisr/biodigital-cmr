@@ -15,7 +15,7 @@ The MI Spectrum experience is a **simulation-only research and learning module**
 | Stage 4 — reusable evidence components | Complete for first vertical slice | Generic status banner, evidence badge/matrix, timeline, and comparison table; MI-specific troponin and classification adapters. |
 | Stage 5 — workspace/persona composition | Complete for first vertical slice | Lazy read-only `MI_SPECTRUM` workspace for attending cardiologist, imaging reviewer, and research coordinator personas. |
 | Stage 6 — scenario controls, comparison, discovery, and export | Complete for first vertical slice | Deterministic playback/reveal, side-by-side comparison, persisted scenario filters, and a simulation-watermarked export surface are complete. |
-| Stage 7 — external/research adapters | Not started — intentionally gated | No EHR, FHIR, DICOM, PHI, or production endpoints are connected. |
+| Stage 7 — external/research adapters | Safety boundary scaffolded; integration intentionally gated | Reusable import contracts and an explicit disabled adapter are present. No EHR, FHIR, DICOM, PHI, or production endpoints are connected. |
 | Stage 8 — quality and release readiness | Complete for the automated baseline | TypeScript lint, 16 contract/unit tests, and the production build pass locally. Responsive, assistive-technology, content-review, and future-adapter security validation remain release activities. |
 
 ## Completed commits
@@ -28,7 +28,8 @@ The MI Spectrum experience is a **simulation-only research and learning module**
 | `3d67873` | Declarative assessment-module registry, generic capability-gated workspace host, and registry contract tests. |
 | `ccdd742` | Persisted scenario discovery filters, pure filter service, reusable filter chips, and filter contract tests. |
 | `fbf505f` | Watermarked simulation export frame, safe text export/copy actions, and export contract tests. |
-| Current working slice | Automated quality baseline: TypeScript fixes, test/build validation, and bundle review. |
+| `9aabc18` | Automated quality baseline: TypeScript fixes, test/build validation, and bundle review. |
+| Current working slice | Terminology/provenance disclosures, scenario-pack metadata, and explicitly blocked external-import boundary. |
 
 ## Current UX capabilities
 
@@ -40,11 +41,13 @@ The MI Spectrum experience is a **simulation-only research and learning module**
 - Side-by-side comparison isolates differences in evidence coverage, presentation, legacy mapping, troponin pattern, gaps, and learning objective.
 - Search and filter controls narrow the synthetic library by pattern, presentation, evidence domain, or learning objective; these non-sensitive display preferences persist locally.
 - Export actions generate only watermarked synthetic-scenario text with limitation and version metadata; they exclude live telemetry and patient data.
+- Terminology and provenance disclosures keep the simulation taxonomy, legacy labels, source state, and limitations inspectable without crowding the primary workflow.
 
 ## Next queued slice
 
-1. Restore local dependencies and run lint, unit tests, production build, responsive QA, and accessibility review.
+1. Complete responsive and assistive-technology QA with representative users; record findings before any production-facing release claim.
 2. Extend the export format only after a separate content, privacy, and accessibility review; retain the simulation watermark and no-PHI boundary.
+3. Enable a real import adapter only after an approved backend, identity, audit, privacy, governance, security, clinical-validation, and regulatory workstream exists.
 
 ## Known limits
 

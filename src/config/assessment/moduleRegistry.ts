@@ -11,7 +11,7 @@ const MiSpectrumWorkspace = lazy(() => import('../../components/mi/MiSpectrumWor
 export const assessmentWorkspaceModules: readonly AssessmentWorkspaceModuleDefinition[] = [
   {
     id: 'mi-spectrum', version: '1.0.0', title: 'Full MI spectrum', workspace: 'MI_SPECTRUM',
-    requiredCapability: 'VIEW_MI_SIMULATION', Component: MiSpectrumWorkspace,
+    requiredCapability: 'VIEW_MI_SIMULATION', scenarioPackIds: ['full-mi-spectrum-core-v1'], Component: MiSpectrumWorkspace,
   },
 ];
 

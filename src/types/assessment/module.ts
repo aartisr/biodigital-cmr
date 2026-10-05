@@ -20,5 +20,6 @@ export interface AssessmentWorkspaceModuleDefinition {
   title: string;
   workspace: WorkspaceId;
   requiredCapability: PersonaCapability;
+  scenarioPackIds: readonly string[];
   Component: ComponentType;
 }
