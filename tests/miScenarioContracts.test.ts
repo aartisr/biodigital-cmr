@@ -2,11 +2,12 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { evaluateMiScenario } from '../src/services/mi/evaluateMiScenario';
 import { miScenarios } from '../src/services/mi/scenarioRepository';
+import type { MiLegacyType } from '../src/types/mi/classification';
 
 test('full MI spectrum scenarios cover every legacy MI type and the injury-only boundary', () => {
   const legacyTypes = new Set(miScenarios.flatMap((scenario) => scenario.expectedAssessment.legacyType ? [scenario.expectedAssessment.legacyType] : []));
-  for (const type of ['TYPE_1', 'TYPE_2', 'TYPE_3', 'TYPE_4A', 'TYPE_4B', 'TYPE_4C', 'TYPE_5']) {
-    assert.ok(legacyTypes.has(type as typeof miScenarios[number]['expectedAssessment']['legacyType']), `missing ${type} scenario`);
+  for (const type of ['TYPE_1', 'TYPE_2', 'TYPE_3', 'TYPE_4A', 'TYPE_4B', 'TYPE_4C', 'TYPE_5'] as const satisfies readonly MiLegacyType[]) {
+    assert.ok(legacyTypes.has(type), `missing ${type} scenario`);
   }
   assert.ok(miScenarios.some((scenario) => scenario.expectedAssessment.category === 'NON_ISCHAEMIC_INJURY'));
   assert.ok(miScenarios.some((scenario) => scenario.expectedAssessment.category === 'UNRESOLVED'));

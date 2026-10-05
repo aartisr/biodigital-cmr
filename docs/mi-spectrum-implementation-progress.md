@@ -16,7 +16,7 @@ The MI Spectrum experience is a **simulation-only research and learning module**
 | Stage 5 — workspace/persona composition | Complete for first vertical slice | Lazy read-only `MI_SPECTRUM` workspace for attending cardiologist, imaging reviewer, and research coordinator personas. |
 | Stage 6 — scenario controls, comparison, discovery, and export | Complete for first vertical slice | Deterministic playback/reveal, side-by-side comparison, persisted scenario filters, and a simulation-watermarked export surface are complete. |
 | Stage 7 — external/research adapters | Not started — intentionally gated | No EHR, FHIR, DICOM, PHI, or production endpoints are connected. |
-| Stage 8 — quality and release readiness | In progress | Contract tests are present. Full local lint/build is blocked until local dependencies are restored; Vercel clean builds remain the integration check. |
+| Stage 8 — quality and release readiness | Complete for the automated baseline | TypeScript lint, 16 contract/unit tests, and the production build pass locally. Responsive, assistive-technology, content-review, and future-adapter security validation remain release activities. |
 
 ## Completed commits
 
@@ -27,7 +27,8 @@ The MI Spectrum experience is a **simulation-only research and learning module**
 | `1585810` | Generic side-by-side comparison and this progress tracker. |
 | `3d67873` | Declarative assessment-module registry, generic capability-gated workspace host, and registry contract tests. |
 | `ccdd742` | Persisted scenario discovery filters, pure filter service, reusable filter chips, and filter contract tests. |
-| Current working slice | Watermarked simulation export frame, safe text export/copy actions, and export contract tests. |
+| `fbf505f` | Watermarked simulation export frame, safe text export/copy actions, and export contract tests. |
+| Current working slice | Automated quality baseline: TypeScript fixes, test/build validation, and bundle review. |
 
 ## Current UX capabilities
 
@@ -50,3 +51,13 @@ The MI Spectrum experience is a **simulation-only research and learning module**
 - The evaluator presents authored simulation outcomes and limitations; it does not implement clinical classification rules for real-world use.
 - Comparison is between static synthetic scenarios only.
 - The current progress does not authorize data ingestion or healthcare integration work.
+
+## Automated validation snapshot
+
+Validated locally on the restored Node 22 toolchain:
+
+- `npm run lint` — passed.
+- `npm test` — passed: 16 tests, 0 failures.
+- `npm run build` — passed.
+
+The MI workspace remains lazy-loaded (`MiSpectrumWorkspace`), producing a separate approximately 51 kB uncompressed / 13 kB gzip chunk in this build. Existing large chunks belong to 3D visualization and PDF features; they are outside the MI module and remain candidates for a separate performance-focused slice.

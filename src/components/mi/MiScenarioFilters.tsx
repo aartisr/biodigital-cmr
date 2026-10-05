@@ -1,11 +1,11 @@
 import { Search, SlidersHorizontal, X } from 'lucide-react';
 import { FilterChipGroup } from '../ui/FilterChipGroup';
 import { miGroupMetadata, presentationLabels } from '../../config/mi/taxonomy';
-import { MiClinicalGroup, MiEvidenceDomain, MiPresentation } from '../../types/mi/classification';
-import { MiScenarioFilters as Filters } from '../../services/mi/filterMiScenarios';
+import type { MiClinicalGroup, MiPresentation } from '../../types/mi/classification';
+import type { MiScenarioFilters as Filters } from '../../services/mi/filterMiScenarios';
 
-const groupOptions = [{ value: 'ALL', label: 'All' }, ...Object.entries(miGroupMetadata).map(([value, item]) => ({ value: value as MiClinicalGroup, label: item.label })] as const;
-const presentationOptions = [{ value: 'ALL', label: 'All' }, ...Object.entries(presentationLabels).map(([value, label]) => ({ value: value as MiPresentation, label })] as const;
+const groupOptions = [{ value: 'ALL', label: 'All' }, ...Object.entries(miGroupMetadata).map(([value, item]) => ({ value: value as MiClinicalGroup, label: item.label }))] as const;
+const presentationOptions = [{ value: 'ALL', label: 'All' }, ...Object.entries(presentationLabels).map(([value, label]) => ({ value: value as MiPresentation, label }))] as const;
 const evidenceOptions = [{ value: 'ALL', label: 'All' }, ...(['SYMPTOMS', 'TROPONIN', 'ECG', 'IMAGING', 'ANGIOGRAPHY', 'PROCEDURE', 'CONTEXT'] as const).map((value) => ({ value, label: value[0] + value.slice(1).toLowerCase() }))] as const;
 
 export const MiScenarioFilters = ({ filters, resultCount, onChange, onReset }: { filters: Filters; resultCount: number; onChange: (next: Filters) => void; onReset: () => void }) => <section className="rounded-2xl border border-slate-800 bg-slate-900/70 p-3 sm:p-4">
