@@ -1,0 +1,8 @@
+import { BookOpenCheck, ChevronRight } from 'lucide-react';
+import { miGroupMetadata } from '../../config/mi/taxonomy';
+import { MiScenarioCase } from '../../types/mi/classification';
+
+export const MiScenarioPicker = ({ scenarios, selectedId, onSelect }: { scenarios: readonly MiScenarioCase[]; selectedId: string; onSelect: (id: string) => void }) => <aside className="rounded-2xl border border-slate-800 bg-slate-900/70 p-3 sm:p-4">
+  <div className="flex items-center gap-2"><BookOpenCheck className="h-4 w-4 text-teal-300" /><div><h2 className="text-sm font-bold text-white">Scenario library</h2><p className="text-xs text-slate-400">Synthetic learning cases</p></div></div>
+  <div className="mt-3 grid gap-2">{scenarios.map((scenario) => { const active = scenario.id === selectedId; const group = miGroupMetadata[scenario.expectedAssessment.category]; return <button key={scenario.id} type="button" onClick={() => onSelect(scenario.id)} aria-pressed={active} className={`group rounded-xl border p-3 text-left transition focus:outline-none focus:ring-2 focus:ring-teal-300 ${active ? 'border-teal-400/70 bg-teal-500/10 shadow-sm' : 'border-slate-800 bg-slate-950/35 hover:border-slate-600 hover:bg-slate-800/70'}`}><div className="flex items-start justify-between gap-2"><p className="text-sm font-semibold text-slate-100">{scenario.title}</p><ChevronRight className={`mt-0.5 h-4 w-4 shrink-0 ${active ? 'text-teal-300' : 'text-slate-600 group-hover:text-slate-300'}`} /></div><span className={`mt-2 inline-flex rounded-full border px-2 py-0.5 text-[10px] font-bold ${group.tone}`}>{group.label}</span></button>; })}</div>
+</aside>;
