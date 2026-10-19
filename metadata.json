@@ -1,0 +1,6 @@
+{
+  "name": "Bio-Digital Closed-Loop Myocardial Regeneration (BD-CMR)",
+  "description": "Nobel-class bio-digital closed-loop myocardial regeneration framework featuring the Quantum-Stochastic Regeneration Engine (QSRE), soft bioelectronics, and electrophysiological restoration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+/*
+ * KaTeX emits several nested HTML elements.  Giving the formula component an
+ * explicit foreground prevents the dark app shell's `text-slate-100` from
+ * washing equations out on white and slate-50 panels.  Use the component's
+ * `tone` prop rather than relying on a container's inherited text colour.
+ */
+.math-formula {
+  color: #0f172a;
+}
+
+.math-formula .katex,
+.math-formula .katex * {
+  color: inherit;
+}
+
+.math-formula--inherit {
+  color: inherit;
+}
+
+.math-formula--inverse {
+  color: #f8fafc;
+}
+
+/* A predictable keyboard focus indicator is required for efficient scanning. */
+:focus-visible {
+  outline: 3px solid #2dd4bf;
+  outline-offset: 3px;
+}
+
+/* Do not let decorative telemetry motion compete with reading or task completion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
