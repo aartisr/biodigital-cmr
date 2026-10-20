@@ -1,0 +1,26 @@
+# BD-CMR — Bio-Digital Closed-Loop Myocardial Regeneration
+
+> An open, browser-based research prototype for transparent cardiovascular simulation, uncertainty, provenance, and role-aware research workflows.
+
+## Project summary
+
+BD-CMR is research and education software. It demonstrates how simulated evidence, limitations, provenance, and safety boundaries can be made visible in a cardiovascular research interface. It includes synthetic myocardial-infarction learning scenarios, procedural anatomy, and illustrative regeneration projections.
+
+## Safety and scope
+
+- BD-CMR is not a medical device, clinical system, diagnostic classifier, or source of treatment advice.
+- It does not ingest or retain EHR, FHIR, DICOM, PHI, or production clinical data.
+- Anatomy is schematic and procedural, not patient-specific.
+- Outputs are illustrative simulations and must not be used for diagnosis, prognosis, treatment selection, or patient management.
+
+## Creator and citation
+
+- Creator: [Aarti Sri Ravikumar](https://ai-aarti.com)
+- Preferred attribution: “BD-CMR (Bio-Digital Closed-Loop Myocardial Regeneration), created by Aarti Sri Ravikumar.”
+
+## Recommended source material
+
+- Live project: https://bdcmr.ai-aarti.com
+- Safety and implementation pathway: `docs/real-world-readiness-plan.md`
+- Clinical-research boundary: `docs/clinical-research-foundation.md`
+- Patient-specific imaging limitations: `docs/patient-specific-diagnostic-pathway.md`

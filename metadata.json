@@ -1,0 +1,12 @@
+{
+  "name": "Bio-Digital Closed-Loop Myocardial Regeneration (BD-CMR)",
+  "description": "Open browser-based research prototype for transparent cardiovascular simulation, provenance, uncertainty, and role-aware research workflows. Not a medical device or clinical decision-support system.",
+  "author": {
+    "name": "Aarti Sri Ravikumar",
+    "url": "https://ai-aarti.com"
+  },
+  "url": "https://bdcmr.ai-aarti.com/",
+  "keywords": ["cardiovascular research", "myocardial infarction simulation", "research software", "provenance", "uncertainty"],
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

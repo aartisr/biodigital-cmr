@@ -1,0 +1,9 @@
+{
+  "name": "BD-CMR — Bio-Digital Cardiovascular Research Prototype",
+  "short_name": "BD-CMR",
+  "description": "Open research software for transparent cardiovascular simulation, uncertainty, and provenance.",
+  "lang": "en",
+  "display": "browser",
+  "background_color": "#020617",
+  "theme_color": "#020617"
+}
