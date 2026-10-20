@@ -40,7 +40,7 @@
     "@types/react-dom": "19.2.2",
     "@types/three": "0.184.0",
     "@vitejs/plugin-react": "^4.4.1",
-    "autoprefixer": "^10.4.21",
+    "autoprefixer": "^10.6.1",
     "esbuild": "^0.25.0",
     "tailwindcss": "^4.3.3",
     "tsx": "^4.21.0",
