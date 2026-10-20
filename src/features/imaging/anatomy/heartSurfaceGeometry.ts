@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from '../../../lib/threeRuntime';
 
 export const DEFAULT_HEART_SURFACE_PARAMETERS = {
   lveddMm: 52,

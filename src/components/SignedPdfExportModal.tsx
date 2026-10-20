@@ -30,8 +30,8 @@ import {
 import {
   generateAndDownloadSignedPdf,
   generateCryptographicMetadata,
-  ReportSignatureMetadata,
 } from '../services/clinicalPdfReportService';
+import type { ReportSignatureMetadata } from '../services/clinicalPdfReportService';
 
 interface SignedPdfExportModalProps {
   isOpen: boolean;
@@ -79,12 +79,12 @@ export const SignedPdfExportModal: React.FC<SignedPdfExportModalProps> = ({
 
   if (!isOpen) return null;
 
-  const handleDownload = () => {
+  const handleDownload = async () => {
     if (!signatureMeta) return;
     setIsSigning(true);
 
-    setTimeout(() => {
-      generateAndDownloadSignedPdf(patient, cellular, vitals, dosing, pacing, signatureMeta);
+    setTimeout(async () => {
+      await generateAndDownloadSignedPdf(patient, cellular, vitals, dosing, pacing, signatureMeta);
       setIsSigning(false);
       setDownloadSuccess(true);
       setTimeout(() => setDownloadSuccess(false), 3000);

@@ -4,7 +4,6 @@
  * Uses jsPDF and Web Crypto API SHA-256 digital signature hashes.
  */
 
-import { jsPDF } from 'jspdf';
 import {
   CellularSensorMetrics,
   ClinicalRole,
@@ -93,14 +92,17 @@ export async function generateCryptographicMetadata(
   };
 }
 
-export function generateAndDownloadSignedPdf(
+export async function generateAndDownloadSignedPdf(
   patient: PatientProfile,
   cellular: CellularSensorMetrics,
   vitals: PatientVitals,
   dosing: EpigeneticDosingState,
   pacing: NanogridPacingState,
   signature: ReportSignatureMetadata
-): void {
+): Promise<void> {
+  // jsPDF is needed only for an explicit export. Keeping it out of the modal's
+  // initial chunk makes opening the review UI fast on constrained networks.
+  const { jsPDF } = await import('jspdf');
   const doc = new jsPDF({
     orientation: 'portrait',
     unit: 'pt',
