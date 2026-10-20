@@ -1,13 +1,15 @@
 /**
- * Plug-and-Play Hospital Database Architecture Adapter
- * Supports HL7 FHIR R4, Epic Cosmos, Cerner Millennium, and DICOM-SR
+ * Synthetic FHIR-shaped research preview.
+ *
+ * It performs no network work and must not be used as an EHR payload. The
+ * preview exists only to make the proposed interoperability boundary inspectable.
  */
 
 import { CellularSensorMetrics, EpigeneticDosingState, NanogridPacingState, PatientProfile, PatientVitals } from '../types/bdcmr';
 
 export interface FhirObservationBundle {
   resourceType: 'Bundle';
-  type: 'transaction';
+  type: 'collection';
   entry: Array<{
     resource: {
       resourceType: string;
@@ -32,17 +34,17 @@ export function generateFhirR4Bundle(
   pacing: NanogridPacingState
 ): FhirObservationBundle {
   const timestamp = new Date().toISOString();
-  const subjectRef = `Patient/${patient.mrnTokenized}`;
+  const subjectRef = 'Patient/synthetic-research-subject';
 
   return {
     resourceType: 'Bundle',
-    type: 'transaction',
+    type: 'collection',
     entry: [
       {
         resource: {
           resourceType: 'Observation',
-          id: `obs-cmr-stiffness-${Date.now()}`,
-          status: 'final',
+          id: `synthetic-cmr-stiffness-${Date.now()}`,
+          status: 'preliminary',
           code: {
             coding: [
               {
@@ -65,8 +67,8 @@ export function generateFhirR4Bundle(
       {
         resource: {
           resourceType: 'Observation',
-          id: `obs-cmr-icm-${Date.now()}`,
-          status: 'final',
+          id: `synthetic-cmr-icm-${Date.now()}`,
+          status: 'preliminary',
           code: {
             coding: [
               {
@@ -89,8 +91,8 @@ export function generateFhirR4Bundle(
       {
         resource: {
           resourceType: 'Observation',
-          id: `obs-cmr-velocity-${Date.now()}`,
-          status: 'final',
+          id: `synthetic-cmr-velocity-${Date.now()}`,
+          status: 'preliminary',
           code: {
             coding: [
               {
@@ -113,8 +115,8 @@ export function generateFhirR4Bundle(
       {
         resource: {
           resourceType: 'Observation',
-          id: `obs-cmr-hr-${Date.now()}`,
-          status: 'final',
+          id: `synthetic-cmr-hr-${Date.now()}`,
+          status: 'preliminary',
           code: {
             coding: [
               {
@@ -132,25 +134,6 @@ export function generateFhirR4Bundle(
             system: 'http://unitsofmeasure.org',
             code: '/min',
           },
-        },
-      },
-      {
-        resource: {
-          resourceType: 'MedicationAdministration',
-          id: `med-admin-lnp-${Date.now()}`,
-          status: 'in-progress',
-          code: {
-            coding: [
-              {
-                system: 'http://www.nlm.nih.gov/research/umls/rxnorm',
-                code: 'BD-CMR-GHMT-LNP',
-                display: `Epigenetic Formulation ${dosing.formulation} (Gata4/Mef2c/Tbx5/Hand2 mRNA LNP)`,
-              },
-            ],
-          },
-          subject: { reference: subjectRef },
-          effectiveDateTime: timestamp,
-          valueString: `Active Infusion Rate: ${dosing.infusionRateNlMin.toFixed(0)} nl/min. Total Delivered: ${dosing.totalDeliveredUl.toFixed(2)} µL`,
         },
       },
     ],

@@ -19,6 +19,8 @@ This directory is a working research dossier for BD-CMR. It separates what the p
 | [UX quality validation](./ux-quality-validation.md) | Implemented accessibility safeguards, validation results, and open manual work. |
 | [Usability and cognitive-load standard](./usability-and-cognitive-load.md) | Interface disclosure rules and evidence required before usability claims. |
 | [Vercel deployment](./vercel-deployment.md) | Static build and release checks. |
+| [Research prototype release checklist](./release-readiness-checklist.md) | Repeatable public-demo release gate. |
+| [Clinical-research foundation](./clinical-research-foundation.md) | Safe server-boundary contracts and required backend activation evidence. |
 
 ## Decision records and implementation history
 

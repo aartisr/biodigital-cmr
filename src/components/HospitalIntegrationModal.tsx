@@ -1,7 +1,6 @@
 /**
- * Hospital Database Architecture & FHIR R4 Interoperability Modal
- * Demonstrates modular adapters for HL7 FHIR R4, Epic Systems, Cerner Millennium,
- * DICOM Waveform, and OMOP CDM cardiac registries.
+ * Non-networked interoperability architecture preview. It never authenticates,
+ * transmits, downloads, or retains clinical data.
  */
 
 import React, { useState } from 'react';
@@ -10,7 +9,6 @@ import {
   X,
   Copy,
   Check,
-  Download,
   Share2,
   Server,
   ShieldCheck,
@@ -46,7 +44,6 @@ export const HospitalIntegrationModal: React.FC<HospitalIntegrationModalProps> =
 }) => {
   const [activeTab, setActiveTab] = useState<'FHIR' | 'EPIC' | 'CERNER' | 'DICOM' | 'OMOP'>('FHIR');
   const [copied, setCopied] = useState(false);
-  const [testPushStatus, setTestPushStatus] = useState<'IDLE' | 'SENDING' | 'SUCCESS'>('IDLE');
 
   if (!isOpen) return null;
 
@@ -57,24 +54,6 @@ export const HospitalIntegrationModal: React.FC<HospitalIntegrationModalProps> =
     navigator.clipboard.writeText(fhirJsonString);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
-  };
-
-  const handleDownload = () => {
-    const blob = new Blob([fhirJsonString], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `FHIR-R4-BDCMR-${patient.mrnTokenized}-${Date.now()}.json`;
-    a.click();
-    URL.revokeObjectURL(url);
-  };
-
-  const handleSimulatePush = () => {
-    setTestPushStatus('SENDING');
-    setTimeout(() => {
-      setTestPushStatus('SUCCESS');
-      setTimeout(() => setTestPushStatus('IDLE'), 3500);
-    }, 800);
   };
 
   return (
@@ -88,10 +67,10 @@ export const HospitalIntegrationModal: React.FC<HospitalIntegrationModalProps> =
             </div>
             <div>
               <h3 className="text-base font-semibold text-white">
-                Hospital Enterprise Architecture & Interoperability Hub
+                Interoperability Architecture Preview
               </h3>
               <p className="text-xs text-slate-400">
-                Plug-and-play adapters for HL7 FHIR R4, Epic Systems, Cerner Millennium & DICOM
+                Synthetic, non-networked examples; no hospital connection or clinical-data transport
               </p>
             </div>
           </div>
@@ -132,7 +111,7 @@ export const HospitalIntegrationModal: React.FC<HospitalIntegrationModalProps> =
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <div className="text-slate-300">
-                  Real-time transaction bundle streaming observations for stiffness, iCM transdifferentiation, conduction velocity, and LNP delivery.
+                  Synthetic FHIR-shaped collection for schema discussion only. It is not a transaction bundle, patient record, observation result, or EHR payload.
                 </div>
                 <div className="flex items-center gap-2">
                   <button
@@ -141,31 +120,6 @@ export const HospitalIntegrationModal: React.FC<HospitalIntegrationModalProps> =
                   >
                     {copied ? <Check className="h-3.5 w-3.5 text-emerald-400" /> : <Copy className="h-3.5 w-3.5" />}
                     <span>{copied ? 'Copied' : 'Copy JSON'}</span>
-                  </button>
-                  <button
-                    onClick={handleDownload}
-                    className="flex items-center gap-1.5 rounded bg-slate-800 px-3 py-1.5 text-slate-300 hover:bg-slate-700 hover:text-white transition"
-                  >
-                    <Download className="h-3.5 w-3.5" />
-                    <span>Download</span>
-                  </button>
-                  <button
-                    onClick={handleSimulatePush}
-                    disabled={testPushStatus !== 'IDLE'}
-                    className={`flex items-center gap-1.5 rounded px-3 py-1.5 font-medium transition ${
-                      testPushStatus === 'SUCCESS'
-                        ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/40'
-                        : 'bg-teal-500 text-slate-950 hover:bg-teal-400'
-                    }`}
-                  >
-                    <Server className="h-3.5 w-3.5" />
-                    <span>
-                      {testPushStatus === 'SENDING'
-                        ? 'Transmitting...'
-                        : testPushStatus === 'SUCCESS'
-                        ? 'HTTP 201 Created!'
-                        : 'Simulate EHR Push'}
-                    </span>
                   </button>
                 </div>
               </div>
@@ -184,7 +138,7 @@ export const HospitalIntegrationModal: React.FC<HospitalIntegrationModalProps> =
                   <span>Epic Interconnect & Bridges HL7 FHIR Gateway</span>
                 </div>
                 <p className="text-slate-400 leading-relaxed">
-                  The BD-CMR system uses OAuth2 Smart-on-FHIR client credentials with Mutual TLS (mTLS) to publish high-rate telemetry into Epic Cosmos repositories. Bio-telemetry is mapped directly to standard Flowsheet IDs:
+                  Proposed integration design only. This prototype does not implement OAuth, mTLS, Epic access, flowsheet mapping, endpoint calls, or telemetry publishing.
                 </p>
                 <div className="grid grid-cols-2 gap-3 text-slate-300 font-mono text-[11px]">
                   <div className="p-2.5 rounded bg-slate-900 border border-slate-800">
@@ -239,7 +193,7 @@ export const HospitalIntegrationModal: React.FC<HospitalIntegrationModalProps> =
                   <span>DICOM Waveform (SOP Class 1.2.840.10008.5.1.4.1.1.9.1.1) & DICOM-SR</span>
                 </div>
                 <p className="text-slate-400 leading-relaxed">
-                  The Micro-ECG and nanogrid 16-channel waveforms are continuously archived into PACS as standard 12-lead + intracardiac electrogram objects. 4D flow MRI strain tensors correlate directly with DICOM-SR structured reports.
+                  Proposed standards boundary only. This prototype does not create, archive, retrieve, parse, or correlate DICOM objects or structured reports.
                 </p>
               </div>
             </div>
@@ -253,7 +207,7 @@ export const HospitalIntegrationModal: React.FC<HospitalIntegrationModalProps> =
                   <span>OHDSI OMOP Common Data Model (CDM v6.0)</span>
                 </div>
                 <p className="text-slate-400 leading-relaxed">
-                  Provides anonymized multi-institutional clinical trial pooling for post-MI regenerative efficacy analysis, comparing time-to-remodeling across international hospital cohorts.
+                  Potential future research-data model only. This prototype does not pool cohorts, access OMOP, calculate efficacy, or make clinical claims.
                 </p>
               </div>
             </div>
