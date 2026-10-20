@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://bdcmr.ai-aarti.com/sitemap.xml

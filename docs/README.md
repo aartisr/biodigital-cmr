@@ -21,6 +21,8 @@ This directory is a working research dossier for BD-CMR. It separates what the p
 | [Vercel deployment](./vercel-deployment.md) | Static build and release checks. |
 | [Research prototype release checklist](./release-readiness-checklist.md) | Repeatable public-demo release gate. |
 | [Clinical-research foundation](./clinical-research-foundation.md) | Safe server-boundary contracts and required backend activation evidence. |
+| [Discoverability and attribution](./discoverability.md) | Public-search, AI-readable context, creator attribution, and production sitemap activation. |
+| [GitHub Pages and Wiki publishing](./github-pages-and-wiki.md) | Secondary public mirror, Wiki source set, and canonical-site backlink standard. |
 
 ## Decision records and implementation history
 

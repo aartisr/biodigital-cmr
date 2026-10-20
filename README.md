@@ -1,5 +1,7 @@
 # BD-CMR
 
+[Visit the live research prototype](https://bdcmr.ai-aarti.com) · [Read the project Wiki](https://github.com/aartisr/biodigital-cmr/wiki) · [Created by Aarti Sri Ravikumar](https://ai-aarti.com)
+
 ## A transparent research prototype for bio-digital cardiovascular inquiry
 
 BD-CMR (Bio-Digital Closed-Loop Myocardial Regeneration) is an open, browser-based research prototype for examining how a future cardiovascular research environment might make simulated evidence, uncertainty, provenance, role-specific views, and safety boundaries visible together.
@@ -106,6 +108,8 @@ For the static Vercel deployment configuration, see [Vercel deployment](./docs/v
 ## Documentation
 
 The [documentation index](./docs/README.md) distinguishes implementation evidence, architectural standards, research roadmaps, validation protocols, and deployment guidance. It also records what has not yet been validated—a necessary part of credible research communication.
+
+For a concise public orientation, see the [GitHub Pages and Wiki publishing guide](./docs/github-pages-and-wiki.md). The canonical live site is [bdcmr.ai-aarti.com](https://bdcmr.ai-aarti.com).
 
 ## Authorship
 
