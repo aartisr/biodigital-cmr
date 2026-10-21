@@ -1,6 +1,6 @@
 # Research Integrity and Scope
 
-[Live prototype](https://bdcmr.ai-aarti.com) · [[Home]] · [Creator: Aarti Sri Ravikumar](https://ai-aarti.com)
+[Live prototype](https://bdcmr.ai-aarti.com) · [[Home]] · [Creator: Aarti S Ravikumar](https://ai-aarti.com)
 
 ## The central boundary
 
@@ -25,4 +25,4 @@ BD-CMR is a browser-based research and education prototype. It uses authored syn
 
 Treat visual confidence as a prompt to inspect evidence—not as evidence itself. A value or graphic may be authored, simulated, inferred, reviewed, or unknown. The interface is designed to keep those states visible.
 
-For a more detailed public explanation, visit the [live BD-CMR research prototype](https://bdcmr.ai-aarti.com). The project was created by [Aarti Sri Ravikumar](https://ai-aarti.com).
+For a more detailed public explanation, visit the [live BD-CMR research prototype](https://bdcmr.ai-aarti.com). The project was created by [Aarti S Ravikumar](https://ai-aarti.com).

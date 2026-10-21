@@ -290,6 +290,11 @@ function BdcmrDashboard() {
             <span aria-hidden="true">·</span>
             <span className="text-amber-300">No performance or safety guarantee</span>
           </div>
+          <p className="w-full text-[11px] text-slate-500">
+            Created by <a href="https://ai-aarti.com" className="text-slate-400 underline decoration-slate-700 underline-offset-2 hover:text-slate-200">Aarti S Ravikumar</a> for ACA program
+            <span aria-hidden="true"> · </span>
+            <a href="https://saugus.pioneercss.org" className="text-slate-400 underline decoration-slate-700 underline-offset-2 hover:text-slate-200">Pioneer Charter School of Science II (PCSS II)</a>
+          </p>
         </div>
       </footer>
 

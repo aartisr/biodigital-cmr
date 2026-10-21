@@ -1,6 +1,6 @@
 # Clinical-Research Pathway
 
-[Live prototype](https://bdcmr.ai-aarti.com) · [[Home]] · [Creator: Aarti Sri Ravikumar](https://ai-aarti.com)
+[Live prototype](https://bdcmr.ai-aarti.com) · [[Home]] · [Creator: Aarti S Ravikumar](https://ai-aarti.com)
 
 ## A deliberate sequence
 

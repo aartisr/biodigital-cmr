@@ -15,8 +15,9 @@ BD-CMR is research and education software. It demonstrates how simulated evidenc
 
 ## Creator and citation
 
-- Creator: [Aarti Sri Ravikumar](https://ai-aarti.com)
-- Preferred attribution: “BD-CMR (Bio-Digital Closed-Loop Myocardial Regeneration), created by Aarti Sri Ravikumar.”
+- Creator: [Aarti S Ravikumar](https://ai-aarti.com)
+- School: [Pioneer Charter School of Science II (PCSS II)](https://saugus.pioneercss.org)
+- Preferred attribution: “BD-CMR (Bio-Digital Closed-Loop Myocardial Regeneration), created by Aarti S Ravikumar.”
 
 ## Recommended source material
 

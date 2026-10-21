@@ -1,14 +1,14 @@
 # Citation and Attribution
 
-[Live prototype](https://bdcmr.ai-aarti.com) · [[Home]] · [Creator: Aarti Sri Ravikumar](https://ai-aarti.com)
+[Live prototype](https://bdcmr.ai-aarti.com) · [[Home]] · [Creator: Aarti S Ravikumar](https://ai-aarti.com)
 
 ## Creator
 
-BD-CMR was created and is led by [Aarti Sri Ravikumar](https://ai-aarti.com).
+BD-CMR was created and is led by [Aarti S Ravikumar](https://ai-aarti.com).
 
 ## Preferred attribution
 
-> BD-CMR (Bio-Digital Closed-Loop Myocardial Regeneration), created by Aarti Sri Ravikumar. https://bdcmr.ai-aarti.com
+> BD-CMR (Bio-Digital Closed-Loop Myocardial Regeneration), created by Aarti S Ravikumar. https://bdcmr.ai-aarti.com
 
 ## Citation guidance
 

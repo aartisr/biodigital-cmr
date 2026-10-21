@@ -9,7 +9,7 @@ test('public discoverability assets preserve accurate creator attribution and sa
   const robots = read('public/robots.txt');
   const llms = read('public/llms.txt');
 
-  assert.match(html, /Aarti Sri Ravikumar/);
+  assert.match(html, /Aarti S Ravikumar/);
   assert.match(html, /https:\/\/ai-aarti\.com/);
   assert.match(html, /https:\/\/bdcmr\.ai-aarti\.com\//);
   assert.match(html, /name="robots" content="index, follow/);
@@ -18,5 +18,5 @@ test('public discoverability assets preserve accurate creator attribution and sa
   assert.match(robots, /Allow: \/$/m);
   assert.match(robots, /Sitemap: https:\/\/bdcmr\.ai-aarti\.com\/sitemap\.xml/);
   assert.match(llms, /not a medical device/i);
-  assert.match(llms, /Aarti Sri Ravikumar/);
+  assert.match(llms, /Aarti S Ravikumar/);
 });

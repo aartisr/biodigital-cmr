@@ -10,4 +10,4 @@
 ---
 
 - [Live research prototype](https://bdcmr.ai-aarti.com)
-- [Aarti Sri Ravikumar](https://ai-aarti.com)
+- [Aarti S Ravikumar](https://ai-aarti.com)

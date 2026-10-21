@@ -50,4 +50,4 @@ BD-CMR aims to make research methods and questions more legible to the communiti
 
 ## Authorship
 
-BD-CMR was created and is led by [Aarti S. Ravikumar](https://ai-aarti.com), student at [Pioneer Charter School of Science II (PCSS II)](https://saugus.pioneercss.org).
+BD-CMR was created and is led by [Aarti S Ravikumar](https://ai-aarti.com), student at [Pioneer Charter School of Science II (PCSS II)](https://saugus.pioneercss.org).

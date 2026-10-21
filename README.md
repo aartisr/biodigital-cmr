@@ -1,6 +1,6 @@
 # BD-CMR
 
-[Visit the live research prototype](https://bdcmr.ai-aarti.com) · [Created by Aarti Sri Ravikumar](https://ai-aarti.com)
+[Visit the live research prototype](https://bdcmr.ai-aarti.com) · [Created by Aarti S Ravikumar](https://ai-aarti.com)
 
 ## A transparent research prototype for bio-digital cardiovascular inquiry
 
@@ -113,7 +113,7 @@ For a concise public orientation, see the [public knowledge-base and backlink st
 
 ## Authorship
 
-Created and led by [Aarti S. Ravikumar](https://ai-aarti.com), student at [Pioneer Charter School of Science II (PCSS II)](https://saugus.pioneercss.org).
+Created and led by [Aarti S Ravikumar](https://ai-aarti.com), student at [Pioneer Charter School of Science II (PCSS II)](https://saugus.pioneercss.org).
 
 ## Contribution and reuse
 

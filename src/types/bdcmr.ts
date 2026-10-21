@@ -6,7 +6,7 @@
  * Type Definitions for Quantum-Stochastic Regeneration Engine (QSRE),
  * Electrophysiology Telemetry, Tensor Geometry, and Persona Policies.
  * 
- * Original Authors/Architecture: Ramanjanappa Ravikumar & Aarti S. Ravikumar
+ * Original Authors/Architecture: Ramanjanappa Ravikumar & Aarti S Ravikumar
  */
 
 import type { InfarctPhenotype } from './mi/infarctPhenotype';

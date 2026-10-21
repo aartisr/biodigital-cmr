@@ -2,7 +2,7 @@
 
 > **BD-CMR is an open research prototype for making cardiovascular simulations, uncertainty, provenance, and safety boundaries easier to inspect.**
 
-[Open the live research prototype](https://bdcmr.ai-aarti.com) · [Meet the creator, Aarti Sri Ravikumar](https://ai-aarti.com)
+[Open the live research prototype](https://bdcmr.ai-aarti.com) · [Meet the creator, Aarti S Ravikumar](https://ai-aarti.com)
 
 ## Why this project exists
 
@@ -30,6 +30,6 @@ The project is designed for research, education, and critical discussion—not c
 
 ## Creator
 
-BD-CMR was created and is led by [Aarti Sri Ravikumar](https://ai-aarti.com).
+BD-CMR was created and is led by [Aarti S Ravikumar](https://ai-aarti.com).
 
 Return to the [live BD-CMR site](https://bdcmr.ai-aarti.com).

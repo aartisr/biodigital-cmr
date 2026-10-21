@@ -39,4 +39,4 @@ This Vercel deployment is appropriate for the current static research/demo front
 
 ## Project credit
 
-Created by [Aarti S. Ravikumar](https://ai-aarti.com), student at [Pioneer Charter School of Science II (PCSS II)](https://saugus.pioneercss.org).
+Created by [Aarti S Ravikumar](https://ai-aarti.com), student at [Pioneer Charter School of Science II (PCSS II)](https://saugus.pioneercss.org).

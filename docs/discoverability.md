@@ -2,7 +2,7 @@
 
 ## What is implemented
 
-The public application includes accurate metadata, social cards, `robots` directives, Schema.org JSON-LD, a web manifest, and an AI-readable `llms.txt`. These assets identify **Aarti Sri Ravikumar** as the creator and link to [ai-aarti.com](https://ai-aarti.com).
+The public application includes accurate metadata, social cards, `robots` directives, Schema.org JSON-LD, a web manifest, and an AI-readable `llms.txt`. These assets identify **Aarti S Ravikumar** as the creator, link to [ai-aarti.com](https://ai-aarti.com), and identify [Pioneer Charter School of Science II (PCSS II)](https://saugus.pioneercss.org) as her school. A quiet footer credits the ACA program context.
 
 The structured data intentionally describes BD-CMR as research and education software, not as a validated medical product. Discoverability must never depend on overstating safety, efficacy, patient specificity, or clinical readiness.
 
@@ -24,7 +24,7 @@ After deployment:
 2. Add and verify the canonical domain in Google Search Console and Bing Webmaster Tools.
 3. Submit the sitemap in each webmaster tool and request indexing for the home page.
 4. Validate Schema.org JSON-LD with a structured-data validator; correct only factual errors.
-5. Link the public site from the repository, [Aarti Sri Ravikumar’s site](https://ai-aarti.com), and credible relevant pages.
+5. Link the public site from the repository, [Aarti S Ravikumar’s site](https://ai-aarti.com), and credible relevant pages.
 6. Monitor crawl/index reports and fix genuine availability, robots, canonical, or content issues.
 
 ## Limits
